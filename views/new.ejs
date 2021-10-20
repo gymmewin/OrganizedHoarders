@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
+
+  <%- include ('./partials/head.ejs') %>
+
   <body>
-    <h1>New</h1>
+    <h1>Whatcha adding to the collection?!</h1>
+
+    <form class="forms" action="/stuff" method="post">
+      <input type="text" name="name" placeholder="name" class="input"><br>
+      <input type="text" name="img" placeholder="picture link" class="input"><br>
+      <textarea name="description" placeholder="description" class="description input"></textarea><br>
+      <input type="number" name="value" placeholder="value" class="input"><br>
+      <input type="submit" id="addbutton" value="Add It">
+    </form>
+
   </body>
 </html>

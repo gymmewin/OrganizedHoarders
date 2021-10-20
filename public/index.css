@@ -6,4 +6,44 @@ body {
 
 h1 {
   font-family: 'Permanent Marker', cursive;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  font-family: 'Permanent Marker', cursive;
+  padding: 5px;
+  background-color: white;
+  margin: 3px;
+}
+
+#addbutton {
+  font-family: 'Permanent Marker', cursive;
+  padding: 5px;
+  background-color: white;
+  margin: 3px;
+  width: 150px;
+}
+
+.forms {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.input {
+  font-family: Calibri;
+  font-size: 14px;
+}
+
+.description {
+  width: 99%;
+  overflow: hidden;
+  resize: none;
+  min-height: 40px;
+  line-height: 20px;
 }
