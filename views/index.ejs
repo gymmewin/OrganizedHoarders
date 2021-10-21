@@ -9,8 +9,18 @@
       <a href="/stuff"><button class="button">Home</button></a>
 
       <a href="/stuff/new"><button class="button">Add Some Stuff</button></a>
-
-
     </nav>
+
+    <div class="collection">
+      <% for(let i=0; i<stuff.length; i++){ %>
+        <div class="someStuff">
+          <a href="/stuff/<%=stuff[i].id%>"></a>
+          <h3> <%=stuff[i].name%> </h3>
+          <img src= <%= stuff[i].img %> class="img">
+          <h3> Value: $<%=stuff[i].price%> </h3>
+        </div>
+      </div>
+      <% } %>
+
   </body>
 </html>
