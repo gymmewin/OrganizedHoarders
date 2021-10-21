@@ -74,7 +74,12 @@ a{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-width: 200px;
+  word-break: break-all;
+  width: 45%;
+}
+
+.text {
+  width: 100%;
 }
 
 .showImg {
@@ -86,6 +91,7 @@ a{
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-top: 2%;
 }
 
 .input {
