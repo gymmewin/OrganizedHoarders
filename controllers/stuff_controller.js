@@ -3,8 +3,8 @@ const express = require('express')
 const router = express.Router()
 
 //========================= Models =========================//
-// const stuffSeed = require('../models.seed.js')
-// const Stuff = require('../models.stuff.js')
+const stuffSeed = require('../models/seed.js')
+const Stuff = require('../models/stuff.js')
 
 
 //========================= Routes =========================//
@@ -16,19 +16,19 @@ router.get('/new', (req, res) => {
 
 //========================= Seed Route =========================//
 router.get('/seed', (req, res) => {
-  // Stuff.create(stuffSeed, (error, data) => {
+  Stuff.create(stuffSeed, (error, data) => {
     res.redirect('/stuff')
-  // })
+  })
 })
 
 //========================= Index Route =========================//
 router.get('/', (req, res) => {
-  // Stuff.find({}, (error, allStuff) => {
+  Stuff.find({}, (error, allStuff) => {
     res.render (
-      'index.ejs'
-      // {stuff: allStuff}
+      'index.ejs',
+      {stuff: allStuff}
     )
-  // })
+  })
 })
 
 //========================= Delete Route =========================//

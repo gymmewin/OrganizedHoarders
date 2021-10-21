@@ -16,11 +16,11 @@
         <div class="someStuff">
           <a href="/stuff/<%=stuff[i].id%>"></a>
           <h3> <%=stuff[i].name%> </h3>
-          <img src= <%= stuff[i].img %> class="img">
-          <h3> Value: $<%=stuff[i].price%> </h3>
+          <img src="<%= stuff[i].img %>" class="img">
+          <h3> Value: $<%=stuff[i].value%> </h3>
         </div>
-      </div>
-      <% } %>
 
+      <% } %>
+      </div>
   </body>
 </html>

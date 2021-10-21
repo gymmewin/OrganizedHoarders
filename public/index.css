@@ -21,14 +21,33 @@ nav {
   margin: 3px;
 }
 
-#addbutton {
+/* =====collection display===== */
+.someStuff{
   font-family: 'Permanent Marker', cursive;
-  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: white;
+  border: 2px solid black;
+  /* padding: 1%; */
   margin: 3px;
-  width: 150px;
+
 }
 
+.collection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.img {
+  height: 300px;
+  width: 300px;
+}
+
+
+/* =====new stuff form===== */
 .forms {
   display: flex;
   justify-content: center;
@@ -46,4 +65,12 @@ nav {
   resize: none;
   min-height: 40px;
   line-height: 20px;
+}
+
+#addbutton {
+  font-family: 'Permanent Marker', cursive;
+  padding: 5px;
+  background-color: white;
+  margin: 3px;
+  width: 150px;
 }
