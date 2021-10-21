@@ -5,5 +5,27 @@
 
   <body>
     <h1>This Organized Hoarder's Stuff</h1>
+
+    <%- include ('./partials/nav.ejs') %>
+    <main class="showMain">
+      <div class="showSomeStuff">
+        <img src=<%= stuff.img %> class="showImg">
+
+        <div class="column">
+          <h1> <%= stuff.name %> </h1>
+          <h4> <%= stuff.description %> </h4>
+          <h4>Price: $<%= stuff.value %> </h4>
+          <div class="editDeleteButtons">
+            <a href="/stuff/<%=stuff.id; %>/edit"><button class="button"">Edit</button></a>
+
+            <form action="/stuff/<%=stuff.id%>?_method=DELETE" method="POST">
+              <input class="button" type="submit" value="DELETE">
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <%- include ('./partials/footer.ejs') %>
   </body>
 </html>

@@ -5,5 +5,15 @@
 
   <body>
     <h1>Edit your stuff</h1>
+    <%- include ('./partials/nav.ejs') %>
+
+    <form class="forms" action="/stuff/<%=stuff.id%>?_method=PUT" method="POST">
+      <input type="text" name="name" class="input" value="<%=stuff.name%>"/><br>
+      <input type="text" name="img" class="input" value="<%=stuff.img%>"/><br>
+      <textarea class="description input" name="description"  placeholder="<%=stuff.description%>" ></textarea><br>
+      <input type="number" name="value" class="input" value="<%=stuff.value%>"/><br>
+      <input type="submit" id="saveButton" value="Save Changes">
+
+    <%- include ('./partials/footer.ejs') %>
   </body>
 </html>

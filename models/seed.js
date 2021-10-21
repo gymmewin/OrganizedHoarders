@@ -24,5 +24,20 @@ module.exports = [
     img: 'https://imgur.com/dNfCp5V.jpg',
     description: 'Jordan 1 Retro High: Rookie of the Year',
     value:'745',
+  }, {
+    name:'Atoms Safaris',
+    img: 'https://imgur.com/MbJVF7B.jpg',
+    description: 'Nike Air Max 1: Atmos Safari',
+    value:'575',
+  }, {
+    name:'Red Safari Prestos',
+    img: 'https://imgur.com/Ny7r6Nq.jpg',
+    description: 'Nike Air Presto: Red Safari',
+    value:'325',
+  }, {
+    name:'Oreo Racers',
+    img: 'https://imgur.com/keKnhJg.jpg',
+    description: 'Nike Flyknit Racers Oreo',
+    value:'215',
   }
 ]
