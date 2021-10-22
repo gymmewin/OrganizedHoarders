@@ -5,6 +5,7 @@ const router = express.Router()
 //========================= Models =========================//
 const stuffSeed = require('../models/seed.js')
 const seedFunko = require('../models/seedFunko.js')
+const seedMMPR = require('../models/seedMMPR.js')
 const Stuff = require('../models/stuff.js')
 
 
@@ -29,7 +30,7 @@ router.get('/seed/funko', (req, res) => {
 })
 
 router.get('/seed/mmpr', (req, res) => {
-  Stuff.create(stuffSeed, (error, data) => {
+  Stuff.create(seedMMPR, (error, data) => {
     res.redirect('/stuff')
   })
 })
