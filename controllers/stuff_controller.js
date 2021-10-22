@@ -4,6 +4,7 @@ const router = express.Router()
 
 //========================= Models =========================//
 const stuffSeed = require('../models/seed.js')
+const seedFunko = require('../models/seedFunko.js')
 const Stuff = require('../models/stuff.js')
 
 
@@ -16,6 +17,18 @@ router.get('/new', (req, res) => {
 
 //========================= Seed Route =========================//
 router.get('/seed', (req, res) => {
+  Stuff.create(stuffSeed, (error, data) => {
+    res.redirect('/stuff')
+  })
+})
+
+router.get('/seed/funko', (req, res) => {
+  Stuff.create(seedFunko, (error, data) => {
+    res.redirect('/stuff')
+  })
+})
+
+router.get('/seed/mmpr', (req, res) => {
   Stuff.create(stuffSeed, (error, data) => {
     res.redirect('/stuff')
   })

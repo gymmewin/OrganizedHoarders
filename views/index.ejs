@@ -6,7 +6,7 @@
   <body>
     <div class="container">
       <h1>Organized Hoarders Home Page</h1>
-      
+
       <%- include ('./partials/nav.ejs') %>
 
       <main>
@@ -14,7 +14,7 @@
           <% for(let i=0; i<stuff.length; i++){ %>
             <div class="someStuff">
               <a href="/stuff/<%=stuff[i].id%>">
-              <h2> <%=stuff[i].name%> </h2>
+              <h2 class="title"> <%=stuff[i].title%> </h2>
               <img src="<%= stuff[i].img %>" class="img">
               </a>
               <h2> Value: $<%=stuff[i].value%> </h2>
