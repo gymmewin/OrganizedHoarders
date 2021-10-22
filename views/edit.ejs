@@ -10,10 +10,15 @@
     <form class="forms" action="/stuff/<%=stuff.id%>?_method=PUT" method="POST">
       <input type="text" name="name" class="input" value="<%=stuff.name%>"/><br>
       <input type="text" name="img" class="input" value="<%=stuff.img%>"/><br>
-      <textarea class="description input" name="description"  placeholder="<%=stuff.description%>" ></textarea><br>
+      <input type="textarea" class="input" name="description"  value="<%=stuff.description%>" ></input><br>
       <input type="number" name="value" class="input" value="<%=stuff.value%>"/><br>
-      <input type="submit" id="saveButton" value="Save Changes">
+      <input type="submit" class="btns" value="Save Changes">
 
     <%- include ('./partials/footer.ejs') %>
   </body>
 </html>
+
+<!---================ Graveyard ===================--->
+<!-- <textarea class="input txtarea" name="description"  value="<%=stuff.description%>" ></textarea><br>
+
+<p><strong>Solution with span:</strong> <span class="textarea" name="description"  value="<%=stuff.description%>" role="textbox" contenteditable></span></p><br> -->

@@ -16,10 +16,10 @@
           <h4 class="text"> <%= stuff.description %> </h4>
           <h4>Value: $<%= stuff.value %> </h4>
           <div class="editDeleteButtons">
-            <a href="/stuff/<%=stuff.id; %>/edit"><button class="button"">Edit</button></a>
+            <a href="/stuff/<%=stuff.id; %>/edit"><button class="btns"">Edit</button></a>
 
             <form action="/stuff/<%=stuff.id%>?_method=DELETE" method="POST">
-              <input class="button" type="submit" value="DELETE">
+              <input class="btns" type="submit" value="DELETE">
             </form>
           </div>
         </div>
