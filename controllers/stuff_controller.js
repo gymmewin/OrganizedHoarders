@@ -38,9 +38,16 @@ router.get('/seed/mmpr', (req, res) => {
 //========================= Index Route =========================//
 router.get('/', (req, res) => {
   Stuff.find({}, (error, allStuff) => {
+    let sum = 0
+    for(let amount of allStuff){
+      sum += amount.value
+    }
     res.render (
       'index.ejs',
-      {stuff: allStuff}
+      {
+        stuff: allStuff,
+        sum: sum
+      }
     )
   })
 })
