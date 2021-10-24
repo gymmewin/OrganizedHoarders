@@ -12,8 +12,8 @@ users.post('/', (req,res) => {
   req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))
   User.create(req.body, (error,createdUser) => {
     console.log('user is created', createdUser)
-    res.redirect('/')
+    res.redirect('/stuff')
   })
 })
 
-module.exports = hoarders
+module.exports = users

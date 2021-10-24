@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <%- include ('../partials/head.ejs') %>
+  <body>
+    <div class="container">
+      <h1>Organized Hoarder's Login</h1>
+
+      <%- include ('../partials/nav.ejs') %>
+      <br>
+      <form action="/sessions" method="POST">
+        <label>U s e r n a m e:</label>
+        <input type="text" name="username" required/> <br>
+        <label>P a s s w o r d:</label>
+        <input type="password" name="password" />
+        <br><br>
+        <input type="submit" value="Log Me In" class="button">
+      <form>
+    </div>
+
+    <%- include ('../partials/footer.ejs') %>
+  </body>
+</html>

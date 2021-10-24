@@ -13,7 +13,10 @@ const Stuff = require('../models/stuff.js')
 
 //========================= New Route =========================//
 router.get('/new', (req, res) => {
-  res.render('new.ejs')
+  res.render(
+    'new.ejs',
+    {currentUser: req.session.currentUser}
+  )
 })
 
 //========================= Seed Route =========================//
@@ -46,7 +49,8 @@ router.get('/', (req, res) => {
       'index.ejs',
       {
         stuff: allStuff,
-        sum: sum
+        sum: sum,
+        currentUser: req.session.currentUser
       }
     )
   })
@@ -66,7 +70,7 @@ router.get('/:id', (req,res) => {
       'show.ejs',
       {
         stuff: showStuff,
-        // currentUser: req.session.currentUser
+        currentUser: req.session.currentUser
       }
     )
   })
@@ -86,7 +90,7 @@ router.get('/:id/edit', (req,res) => {
       'edit.ejs',
       {
         stuff: foundStuff,
-        // currentUser: req.session.currentUser
+        currentUser: req.session.currentUser
       }
     )
   })

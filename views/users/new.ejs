@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <%- include ('./partials/head.ejs') %>
+  <%- include ('../partials/head.ejs') %>
   <body>
-    <%- include ('./partials/nav.ejs') %>
+    <div class="container">
+      <h1>New Hoarder Sign Up</h1>
 
-    
+      <%- include ('../partials/nav.ejs') %>
+      <br>
+      <form action="/users" method="POST">
+        <label>U s e r n a m e:</label>
+        <input type="text" name="username" required/><br>
+        <label>P a s s w o r d:</label>
+        <input type="password" name="password" />
+        <br><br>
+        <input type="submit" value="Make Me A Hoarder" class="button">
+      <form>
+    </div>
 
-    <%- include ('./partials/footer.ejs') %>
+    <%- include ('../partials/footer.ejs') %>
   </body>
 </html>
