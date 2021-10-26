@@ -4,7 +4,8 @@ const stuffSchema = new mongoose.Schema({
   title: {type: String, required: true, maxLength: 40},
   img: String,
   description: String,
-  value: {type: Number, min:0}
+  value: {type: Number, min:0},
+  user: String
 })
 
 const Stuff = mongoose.model('Stuff', stuffSchema)

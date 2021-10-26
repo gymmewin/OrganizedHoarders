@@ -21,18 +21,28 @@ router.get('/new', (req, res) => {
 
 //========================= Seed Route =========================//
 router.get('/seed', (req, res) => {
+  //run this for of loop and set the stuff to belong to stuff.user and make stuff.user = to currentUser
+  for(const stuff of stuffSeed){
+    stuff.user = req.session.currentUser._id
+  }
   Stuff.create(stuffSeed, (error, data) => {
     res.redirect('/stuff')
   })
 })
 
 router.get('/seed/funko', (req, res) => {
+  for(const stuff of seedFunko){
+    stuff.user = req.session.currentUser._id
+  }
   Stuff.create(seedFunko, (error, data) => {
     res.redirect('/stuff')
   })
 })
 
 router.get('/seed/mmpr', (req, res) => {
+  for(const stuff of seedMMPR){
+    stuff.user = req.session.currentUser._id
+  }
   Stuff.create(seedMMPR, (error, data) => {
     res.redirect('/stuff')
   })
@@ -40,7 +50,8 @@ router.get('/seed/mmpr', (req, res) => {
 
 //========================= Index Route =========================//
 router.get('/', (req, res) => {
-  Stuff.find({}, (error, allStuff) => {
+  //Don't find all the objects with empty {}. Find all the objects that belong to the user.
+  Stuff.find({user: req.session.currentUser}, (error, allStuff) => {
     let sum = 0
     for(let amount of allStuff){
       sum += amount.value
@@ -78,6 +89,8 @@ router.get('/:id', (req,res) => {
 
 //========================= Post Route =========================//
 router.post('/', (req,res) => {
+  //when creating new stuff, assign the user of the stuff as the currentUser.
+  req.body.user = req.session.currentUser._id
   Stuff.create(req.body, (error, createdStuff) => {
     res.redirect('/stuff')
   })
