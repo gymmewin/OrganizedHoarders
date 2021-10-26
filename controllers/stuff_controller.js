@@ -9,10 +9,19 @@ const seedMMPR = require('../models/seedMMPR.js')
 const Stuff = require('../models/stuff.js')
 
 
+//========================= Middleware =========================//
+const isAuthenticated = (req,res,next) => {
+  if (req.session.currentUser){
+    return next()
+  } else {
+    res.redirect('/sessions/new')
+  }
+}
+
 //========================= Routes =========================//
 
 //========================= New Route =========================//
-router.get('/new', (req, res) => {
+router.get('/new', isAuthenticated, (req, res) => {
   res.render(
     'new.ejs',
     {currentUser: req.session.currentUser}
