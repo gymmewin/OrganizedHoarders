@@ -28,6 +28,14 @@ router.get('/new', isAuthenticated, (req, res) => {
   )
 })
 
+//========================= About Us Route =========================//
+router.get('/about', (req, res) => {
+  res.render(
+    'about.ejs',
+    {currentUser: req.session.currentUser}
+  )
+})
+
 //========================= Seed Route =========================//
 router.get('/seed', (req, res) => {
   //run this for of loop and set the stuff to belong to stuff.user and make stuff.user = to currentUser

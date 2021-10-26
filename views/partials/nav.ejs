@@ -1,7 +1,19 @@
+<% if (currentUser) { %>
+  <h2>Welcome <%=currentUser.username%></h2>
+<% } %>
+
 <nav>
   <a href="/stuff"><button class="button">Home.</button></a>
 
+  <a href="/stuff/about"><button class="button">About Us</button></a>
+
   <a href="/stuff/new"><button class="button">Add Some Stuff!</button></a>
+
+  <% if (currentUser) { %>
+  <form action="/sessions?_method=DELETE" method="post">
+    <input type="submit" value="Log Out" class="btns">
+  </form>
+  <% } %>
 
   <% if (!currentUser){ %>
     <a href="/users/new"><button class="button">New Hoarder?</button></a>
@@ -9,10 +21,3 @@
     <a href="/sessions/new"><button class="button">Log In.</button></a>
   <% } %>
 </nav>
-
-    <% if (currentUser) { %>
-    <h2>Welcome <%=currentUser.username%></h2>
-    <form action="/sessions?_method=DELETE" method="post">
-      <input type="submit" value="Log Out" class="btns">
-    </form>
-  <% } %>
