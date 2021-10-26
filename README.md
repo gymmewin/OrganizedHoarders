@@ -3,15 +3,15 @@
 
 Technologies Used:
 ------------------
-*HTML
-*CSS
-*Javascript
-*Express
-*MongoDB
-*Mongoose 
-*Bcrypt
-*Heroku
-*GitHub
+* HTML
+* CSS
+* Javascript
+* Express
+* MongoDB
+* Mongoose
+* Bcrypt
+* Heroku
+* GitHub
 
 Approach Taken:
 ---------------
