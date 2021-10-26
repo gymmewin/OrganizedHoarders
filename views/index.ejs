@@ -5,6 +5,11 @@
 
   <body>
     <div class="container">
+      <% if (currentUser) { %>
+        <!-- if the user is logged in, display welcome + their username -->
+        <h1>Welcome <%=currentUser.username%></h1>
+      <% } %>
+
       <h1>Organized Hoarders Home Page</h1>
 
       <%- include ('./partials/nav.ejs') %>

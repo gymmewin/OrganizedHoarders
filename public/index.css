@@ -57,6 +57,11 @@ a{
 }
 
 /* =====Show Page===== */
+#showPageHeader {
+  font-size: 42px;
+  margin-bottom: -1%;
+}
+
 .showMain {
   display:flex;
   justify-content: center;

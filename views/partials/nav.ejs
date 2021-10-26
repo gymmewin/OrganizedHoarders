@@ -1,7 +1,3 @@
-<% if (currentUser) { %>
-  <h2>Welcome <%=currentUser.username%></h2>
-<% } %>
-
 <nav>
   <a href="/stuff"><button class="button">Home.</button></a>
 
@@ -10,12 +6,12 @@
   <a href="/stuff/new"><button class="button">Add Some Stuff!</button></a>
 
   <% if (currentUser) { %>
+<!-- if the user is logged in, display a log out button -->
   <form action="/sessions?_method=DELETE" method="post">
     <input type="submit" value="Log Out" class="btns">
   </form>
-  <% } %>
-
-  <% if (!currentUser){ %>
+  <% } else { %>
+<!-- if there is no user logged in, display sign up and log in button -->
     <a href="/users/new"><button class="button">New Hoarder?</button></a>
 
     <a href="/sessions/new"><button class="button">Log In.</button></a>
